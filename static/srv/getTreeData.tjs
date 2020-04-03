@@ -1,0 +1,38 @@
+/// <reference path="../vsdoc/api.js" />
+<!--#INCLUDE FILE="/AppEngine/CoreExt/ThingsSrv/base.tjs"-->
+<%@ LANGUAGE=JavaScript %>
+<%
+	Response.clear();
+Response.write(function(){
+    //
+    //debugger;
+    var result={
+        data:[
+            
+        ],
+    };
+
+    var data=IOT.JSON.decode(IOT.Utils.ExcuteAPI("GET","API/System/LCPS/Network","")).list;
+
+    var series=[];
+    for(var i=0;i<data.length;i++){
+        var opcpath=data[i].tag;
+        if(opcpath!="") {
+            var e={url:"API/System/LCPS/Network/"+opcpath};
+            series[i]=e;
+        }
+    }
+    for(var i=0;i<series.length;i++){
+        var res=IOT.JSON.decode(IOT.Utils.ExcuteAPI("GET",series[i].url)).nodeList;
+        if(res.length>0){
+            for(var j=0;j<res.length;j++){
+                res[j].name = res[j].NodeName;
+            }
+            data[i].children = res;
+        }
+    }
+        
+     return IOT.JSON.encode(data);
+}());
+	Response.ContentType = "text/plain";
+%>

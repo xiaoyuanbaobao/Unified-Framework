@@ -1,0 +1,268 @@
+html{
+    height: 100%;
+}
+body{
+    margin: 0;
+    min-width: 320px;
+    height: 100%;
+}
+
+*{  
+    /*去除元素与元素之间的间距*/
+    /*font-size: 0;
+    -webkit-text-size-adjust: none;*/
+    /*盒子的属性*/
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+div,section,ul,li,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,p,table,thead,tbody,tfoot,tr,th,td,form{
+    margin: 0;
+    padding: 0;
+}
+
+/* 列表 */
+ul,ol {
+    list-style: none;
+    font-size:inherit;
+    color: #94B2D0;
+}
+
+/*文字*/
+span,b,i,em,del,strong,big,small,pre {
+    margin:0;
+    padding:0;
+    border:0;
+    font-style:normal;
+    font-size:inherit;
+    color:inherit;
+}
+/*链接*/
+a {
+    margin:0;
+    padding:0;
+    border:0;
+    text-decoration: none;
+    font-size:inherit;
+    color:inherit;
+    /*去掉a标签默认点击的时候会有个高亮的背景色：*/
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+/*去掉img的边框*/
+/*img{
+    border: 0;
+}*/
+
+/*常用命令的总结*/
+.clear {
+    clear: both;
+}
+.clearfix{
+    zoom: 1;
+}
+.clearfix::after{
+    content: '';
+    display: block;
+    overflow: hidden;
+    clear:both;
+    height:0;
+}
+.inblock{
+    display: inline-block;
+}
+
+
+/* 容器 */
+.el-main {
+    padding: 0 5px 5px 5px;
+    z-index: -1;
+}
+.el-container,.el-main {
+    height: 100%;
+    /* background-color: #182B43; */
+} 
+.el-submenu .el-menu {
+    border: none;
+    display: list-item;
+}
+.el-menu{
+    border-right: none;
+    background-color:#1D324F;
+}
+
+/* 树-样式覆盖 */
+/* .el-tree {
+    background-color: #1D324F;
+    color: #94B2D0;
+}
+.el-tree-node:focus>.el-tree-node__content,
+.el-tree-node__content:hover {
+    background-color: rgb(29, 50, 79);
+}
+.el-tree__empty-text,.el-tree-node__expand-icon,.el-tree-node__loading-icon{
+    color: #94B2D0
+}
+.el-tree-node {
+    padding-top: 5px;
+} */
+
+/* 卡片-样式覆盖 */
+/* .el-card {
+    border: 1px solid #4b6c99;
+    background-color: rgb(29, 50, 79);
+    color: #94B2D0
+}
+.el-card__header {
+    padding: 8px 20px;
+    border-bottom: 1px solid #556b8b;
+}
+.el-card__body {
+    padding: 0 15px;
+    background-color: rgb(29, 50, 79)
+} */
+
+/* 表格-样式覆盖 */
+/* .el-table,
+.el-table__expanded-cell {
+    background-color: rgb(29, 50, 79)
+}
+.el-table__expanded-cell:hover {
+    background-color: rgb(40, 67, 105) !important
+}
+.el-table thead {
+    color: #94B2D0;
+}
+.el-table thead.is-group th,
+.el-table__footer-wrapper tbody td,
+.el-table__header-wrapper tbody td {
+    background: rgb(29, 50, 79)
+
+}
+.el-table th,
+.el-table tr {
+    background-color: rgb(29, 50, 79);
+    color: #94B2D0;
+}
+.el-table td,
+.el-table th.is-leaf {
+    border-bottom: 1px solid rgb(29, 50, 79)
+}
+.el-table--striped .el-table__body tr.el-table__row--striped.current-row td,
+.el-table__body tr.current-row>td,
+.el-table__body tr.hover-row.current-row>td,
+.el-table__body tr.hover-row.el-table__row--striped.current-row>td,
+.el-table__body tr.hover-row.el-table__row--striped>td,
+.el-table__body tr.hover-row>td {
+    background-color: #405775
+}
+.el-table::before {
+    height: 0
+}
+.el-table--enable-row-hover .el-table__body tr:hover>td {
+    background-color: rgb(40, 67, 105)
+} */
+
+/* 下拉框-样式覆盖 */
+/* .el-dropdown,.el-dropdown-menu__item {
+    color: #94B2D0;
+    background-color: rgb(29, 50, 79)
+}
+.el-dropdown-menu {
+    background-color: #172f50;
+    border: 1px solid #172f50;
+}
+.el-dropdown-menu__item:focus,
+.el-dropdown-menu__item:not(.is-disabled):hover {
+    background-color: #172f50;
+    color: #94B2D0
+}
+.el-dropdown-menu__item.is-disabled {
+    color: #46515F
+} */
+
+/* 分页--样式覆盖 */
+/* .el-pagination {
+    padding: 0 5px;
+    color: #94B2D0;
+}
+.el-pagination .el-select .el-input .el-input__inner{
+    color: #94B2D0;   
+    background-color: #172f50;
+    border: 1px solid #364d6d 
+}
+.el-pagination .btn-next,
+.el-pagination .btn-prev {
+    background: center center no-repeat rgb(29, 50, 79);
+    color: #94B2D0;
+}
+.el-pagination .btn-next .el-icon,
+.el-pagination .btn-prev .el-icon {
+    color: #94B2D0
+}
+.el-pagination .btn-prev ,
+.el-pagination .btn-next {
+    background-color: #172f50
+} 
+.el-pagination__sizes,.el-pagination__total,.el-pagination__jump {
+    color: #94B2D0
+}
+.el-pagination.is-background .btn-next,
+.el-pagination.is-background .btn-prev,
+.el-pagination.is-background .el-pager li {
+    background-color: #172f50;
+    color: #94B2D0;
+}
+.el-pagination.is-background .btn-next.disabled,
+.el-pagination.is-background .btn-prev.disabled {
+    color: #46515F
+}
+.el-pagination.is-background .el-pager li:hover {
+    color: rgb(57, 103, 150)
+}
+.el-pagination.is-background .el-pager li.active {
+    background-color: rgb(29, 50, 79);
+    color: #94B2D0
+}
+.el-pagination__sizes .el-input .el-input__inner:hover {
+    border-color: rgb(46, 73, 100)
+} */
+
+/* 下拉框鼠标移动-样式覆盖 */
+/* .el-select-dropdown.is-multiple .el-select-dropdown__item.selected {
+    color: #94B2D0;
+    background-color: rgb(29, 50, 79)
+}
+.el-select-dropdown__item.hover,
+.el-select-dropdown__item:hover {
+    background-color: #172f50
+}
+
+.el-select-dropdown.is-multiple .el-select-dropdown__item.selected.hover {
+    background-color: rgb(29, 50, 79)
+}
+
+.el-pager li:hover, .el-pager li.active {
+    color: rgb(29, 50, 79)
+} */
+
+
+
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/   
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-corner {
+    background-color: #1D324F;
+}
+     
+::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background-clip: content-box;
+    background-color: #405775;
+}
+::selection {
+    background: rgba(60,120,180,0.3);
+}

@@ -1,0 +1,59 @@
+/* 默认页面样式 */
+/* 页面布局 */
+/* 顶部导航 */
+.el-header{
+    background-color:#1D324F;
+    color: #333;
+    width: 100%;
+    text-align: center;
+    color: #94B2D0;
+    padding: 0 !important;
+}
+.el-footer{
+    padding: 0 !important;
+}
+/* 页面布局样式 */
+.el-main {
+    background-color: #172f50;  
+    color: #94B2D0;
+}
+/* 导航栏样式 */
+.navbar{
+    width: 100%;
+}
+.el-menu {
+    border-bottom: none !important;
+}
+/* log样式 */
+.head_log{
+   margin-top: .6rem;
+   cursor: pointer;
+}
+/* 顶部导航栏居中 */
+.head_nav .el-menu{
+    display: flex;
+    justify-content: center;
+}
+/* 关闭按钮样式 */
+.head_exit{
+    line-height:60px;
+    font-size: 1.9rem;
+    cursor: pointer;
+}
+.user {
+    font-size: 1rem;
+}
+.head_exit img {
+    width: 25px;
+    height: 30px;
+    float: right;
+    margin-top: 18px;
+}
+.grid-content {
+   border-radius: 4px;
+   min-height: 36px;
+ }
+ .pagination {
+     width: 400px;
+     margin: 8px auto;
+ }

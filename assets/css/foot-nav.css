@@ -1,0 +1,36 @@
+/* 底部导航栏样式 */
+.el-footer {
+    width: 100% !important;
+    background-color: rgb(84, 92, 100) !important;
+    height: 50px !important;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+}
+.foot-nav {
+    height: 50px !important;
+    border-bottom: none !important;
+    display: flex;
+    justify-content: space-between;
+}
+
+.foot-nav li {
+    padding: 0;
+    height: 50px !important;
+    line-height: 25px !important;
+}
+
+.foot-nav li p i{
+    font-family: 'iconfont';
+}
+
+.foot-nav li p img {
+    width: 14px;
+    height: 14px;
+    margin-top: 8px;
+}
+
+.foot-nav li span {
+    font-size: 12px;
+}
