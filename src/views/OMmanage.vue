@@ -1,17 +1,17 @@
 <template>
-    <div class="alarmcenter" >
+    <div class="ommanage" > 
             <div style="font-size:20px;color:red;margin:200px 100px 100px 300px ">
-                    报警中心
+                    运维管理
                 </div>
-        
+       
     </div>
 </template>
 <script>
-    import '@/assets/css/alarmcenter.css'
-    import {  } from '@/api/alarmcenter.js'
+    import '@/assets/css/ommanage.css'
+    import { getRealCont,getHisCont,getRealControlDetail,getHisControlDetail } from '@/api/ommanage.js'
     import { split_array } from '@/api/basemain.js'
     export default {
-        name : 'alarmcenter',
+        name : 'ommanage',
         data() {
             return {
                 
@@ -20,7 +20,7 @@
         computed: {
             
         },
-        created () {
+        mounted () {
 
         },
         methods: {
@@ -34,3 +34,6 @@
         }
     }
 </script>
+<style scoped>
+
+</style>

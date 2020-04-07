@@ -11,35 +11,43 @@
                     </div>
                     <el-menu :default-active="this.$router.path" router  style="display:inline-block; margin:20px 0 0 -15px;" class="el-menu-vertical-demo" 
                       text-color="#94B2D0" active-text-color="#ffd04b" :collapse="isCollapse">
-                          <el-menu-item index="analysis">
-                              <i class="el-icon-location"></i>
-                              <span slot="title">运行总览</span>
+                          <el-menu-item index="situational">
+                              <i class="el-icon-menu"></i>
+                              <span slot="title">态势感知</span>
                           </el-menu-item>
-                          <el-menu-item index="realtime">
-                            <i class="el-icon-menu"></i>
+                          <el-menu-item index="rtmonitor">
+                            <i class="el-icon-location"></i>
                             <span slot="title">实时监测</span>
                           </el-menu-item>
-                          <el-menu-item index="record">
+                          <el-menu-item index="ommanage">
                               <i class="el-icon-setting"></i>
-                              <span slot="title">控制中心</span>
+                              <span slot="title">运维管理</span>
                             </el-menu-item>
-                          <el-menu-item index="strategy">
+                          <el-menu-item index="manalysis">
                               <i class="el-icon-edit"></i>
-                              <span slot="title">策略中心</span>
+                              <span slot="title">专题分析</span>
                             </el-menu-item>         
                           <el-menu-item index="alarm">
                               <i class="el-icon-warning"></i>
                               <span slot="title">报警中心</span>
                           </el-menu-item>
+                          <el-menu-item index="report">
+                              <i class="el-icon-document"></i>
+                              <span slot="title">报表中心</span>
+                          </el-menu-item>
+                          <el-menu-item index="dispatch">
+                            <i class="el-icon-service"></i>
+                            <span slot="title">调度中心</span>
+                        </el-menu-item>
                     </el-menu> 
                 </div>
               </el-col>
               <el-col class="hidden-sm-and-down" style="height:60px;text-align:center" :span="12">
-                <div class="grid-content clear">
-                  <h2>
+                <div class="grid-content clear" style="line-height:60px;">
+                  <h1>
                       变电所运行管理平台
-                  </h2>
-                  <p style="font-size:.9rem;margin-top:5px;">Substation operation management</p>
+                  </h1>
+                  <!-- <p style="font-size:.9rem;margin-top:5px;">Substation operation management</p> -->
                 </div>  
               </el-col>
               <el-col :span="6" >

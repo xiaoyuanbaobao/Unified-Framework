@@ -1,17 +1,17 @@
 <template>
-    <div class="alarmcenter" >
+    <div class="dispatchcenter" >
             <div style="font-size:20px;color:red;margin:200px 100px 100px 300px ">
-                    报警中心
+                    调度中心
                 </div>
         
     </div>
 </template>
 <script>
-    import '@/assets/css/alarmcenter.css'
-    import {  } from '@/api/alarmcenter.js'
+    import '@/assets/css/dispatchcenter.css'
+    import {  } from '@/api/dispatchcenter.js'
     import { split_array } from '@/api/basemain.js'
     export default {
-        name : 'alarmcenter',
+        name : 'dispatchcenter',
         data() {
             return {
                 

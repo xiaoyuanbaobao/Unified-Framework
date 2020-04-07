@@ -1,34 +1,35 @@
 <template>
-    <div class="alarmcenter" >
+    <div class="rtmonitor">       
             <div style="font-size:20px;color:red;margin:200px 100px 100px 300px ">
-                    报警中心
+                    实时监测
                 </div>
-        
     </div>
 </template>
 <script>
-    import '@/assets/css/alarmcenter.css'
-    import {  } from '@/api/alarmcenter.js'
-    import { split_array } from '@/api/basemain.js'
+    import '@/assets/css/rtmonitor.css'
+    import {  } from '@/api/rtmonitor.js'
+
+    import echarts from '@/util/echarts.js'
+    
     export default {
-        name : 'alarmcenter',
+        name : 'rtmonitor',
+        components: {},
         data() {
             return {
                 
             }
         },
         computed: {
-            
-        },
-        created () {
-
+           
         },
         methods: {
             
             error(message) {
+                const h = this.$createElement;
+
                 this.$notify({
-                title: '错误信息',
-                message: h('i', { style: 'color: teal'}, message)
+                    title: '错误信息',
+                    message: h('i', { style: 'color: teal'}, message)
                 });
             },
         }

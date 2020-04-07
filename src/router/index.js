@@ -1,10 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import RunAnalysis from '@/views/RunAnalysis'
-import RealTime from '@/views/RealTime'
-import ControlRecord from '@/views/ControlRecord'
-import AlarmCenter from '@/views/AlarmCenter'
-import StrategyCenter from '@/views/StrategyCenter'
+import Situational from '@/views/Situational'
+import RTmonitor from '@/views/RTmonitor'
+import OMmanage from '@/views/OMmanage'
+import Alarmcenter from '@/views/Alarmcenter'
+import Reportcenter from '@/views/Reportcenter'
+import Dispatchcenter from '@/views/Dispatchcenter'
+import Manalysis from '@/views/Manalysis'
 
 Vue.use(Router)
 
@@ -12,32 +14,42 @@ export default new Router({
   routes: [
     {
       path: '/', 
-      redirect:"/analysis"
+      redirect:"/situational"
     },
     {
-      path: '/realtime',
-      name: 'realtime',
-      component: RealTime
+      path: '/rtmonitor',
+      name: 'rtmonitor',
+      component: RTmonitor
     },
     {
       path: '/alarm',
       name: 'alarmcenter',
-      component: AlarmCenter
+      component: Alarmcenter
     },
     {
-      path: '/analysis',
-      name: 'runanalysis',
-      component: RunAnalysis
+      path: '/report',
+      name: 'reportcenter',
+      component: Reportcenter
     },
     {
-      path: '/strategy',
-      name: 'strategycenter',
-      component: StrategyCenter
+      path: '/dispatch',
+      name: 'dispatchcenter',
+      component: Dispatchcenter
     },
     {
-      path: '/record',
-      name: 'controlrecord',
-      component: ControlRecord
+      path: '/situational',
+      name: 'situational',
+      component: Situational
+    },
+    {
+      path: '/manalysis',
+      name: 'manalysis',
+      component: Manalysis
+    },
+    {
+      path: '/ommanage',
+      name: 'ommanage',
+      component: OMmanage
     }
   ]
 })
