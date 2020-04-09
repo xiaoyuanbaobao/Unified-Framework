@@ -6,10 +6,10 @@
             <el-row style="width:100%;">
               <el-col :span="6" style="text-align:left;padding-left:20px;"> 
                   <div class="grid-content head_nav" style="float:left;width:100px" >
-                    <div v-model="isCollapse" style="height:50px;width:50px;cursor: pointer;" @click="changeMenu()">
+                    <div v-model="isCollapse" style="height:50px;width:50px;cursor: pointer;" @click="changeMune" >
                         <img style="width:100%;height:100%;border-radius:50%;margin:5px 0px" src="./assets/imgs/ali-icon-menu.svg" alt="">
                     </div>
-                    <el-menu :default-active="this.$router.path" router  style="display:inline-block; margin:20px 0 0 -15px;" class="el-menu-vertical-demo" 
+                    <el-menu :default-active="this.$router.path"  router style="display:inline-block; margin:20px 0 0 -250px;" class="el-menu-vertical-demo myMenu" 
                       text-color="#94B2D0" active-text-color="#ffd04b" :collapse="isCollapse">
                           <el-menu-item index="situational">
                               <i class="el-icon-menu"></i>
@@ -76,7 +76,8 @@ export default {
   name: 'App',
   data() {
     return {
-      isCollapse: true,
+      isCollapse: false,
+      isOpen: false,
       username: ''
     }
   },
@@ -98,9 +99,15 @@ export default {
         console.log(err);
       })
     },
-    //切换菜单
-    changeMenu(){
-      this.isCollapse=!this.isCollapse;
+    /*菜单弹出*/ 
+    changeMune(){
+      console.log(this.isOpen);
+      if(!this.isOpen){
+        $('.myMenu').animate({left:"220px"});
+      }else(
+        $('.myMenu').animate({left:"-200px"})
+      )
+      this.isOpen=!this.isOpen;
     },
     /* 点击退出当前应用事件 */
     handleClose() {
@@ -134,5 +141,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   height:100%;
 }
-
+@keyframes rifhtToLeft{
+  from {margin-left:-100px}
+  to {margin-left:-20px}
+}
 </style>
