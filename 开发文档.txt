@@ -1,0 +1,10 @@
+变电所开发内容注意事项									
+									
+菜单名称	对应文件	        画面存放位置	对应样式文件	     存放位置	        对应脚本方法	       对应位置	    路由配置文件	       主菜单页面（index.html）   全局配置文件（main.js）
+态势感知	Situational.vue	   src\views	situational.css	   src\assets\css	situational.js	    src\api	    src\router\index.js	  文件名\index.html	    文件名\main.js
+实时监测	RTmonitor.vue	   src\views	rtmonitor.css	   src\assets\css	rtmonitor.js	    src\api	    src\router\index.js	  文件名\index.html	    文件名\main.js
+运维管理	OMmanage.vue	   src\views	ommanage.css	   src\assets\css	ommanage.js	        src\api	    src\router\index.js	  文件名\index.html	    文件名\main.js
+专题分析	Manalysis.vue	   src\views	manalysis.css	   src\assets\css	manalysis.js	    src\api	    src\router\index.js	  文件名\index.html	    文件名\main.js
+报警中心	Alarmcenter.vue	   src\views	alarmcenter.css	   src\assets\css	alarmcenter.js	    src\api	    src\router\index.js	  文件名\index.html	    文件名\main.js
+报表中心	Reportcenter.vue	src\views	reportcenter.css	src\assets\css	reportcenter.js	    src\api	    src\router\index.js	  文件名\index.html	    文件名\main.js
+调度中心	Dispatchcenter.vue	src\views	dispatchcenter.css	src\assets\css	dispatchcenter.js	src\api	    src\router\index.js	  文件名\index.html	    文件名\main.js
